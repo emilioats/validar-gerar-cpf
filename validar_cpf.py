@@ -19,7 +19,9 @@ def validar(reverso=10, total=0):
             total = 0
             novo_cpf += str(d)
 
-    if cpf == novo_cpf:
+    sequencia = novo_cpf == str(novo_cpf[0]) * len(cpf)
+
+    if cpf == novo_cpf and not sequencia:
         print('### CPF VÁLIDO!')
     else:
         print('### CPF INVÁLIDO')
